@@ -99,6 +99,7 @@
   var VENUES = {
     // --- The Olympic Peninsula: Sequim, Port Angeles, Port Townsend ---
     '7 Cedars Casino': {
+      geo: [48.02189, -123.01087],
       capacity: 700,
       type: 'concert',
       cssVar: '--v-cedars',
@@ -109,6 +110,7 @@
       alias: /7 cedars|seven cedars/i,
     },
     'Clallam County Fairgrounds': {
+      geo: [48.1171, -123.47723],
       capacity: 3000,
       type: 'community',
       cssVar: '--v-clallam',
@@ -119,6 +121,7 @@
       alias: /clallam county fair/i,
     },
     'Fort Worden': {
+      geo: [48.1366, -122.7658],
       capacity: 1200,
       type: 'concert',
       cssVar: '--v-worden',
@@ -129,6 +132,7 @@
       alias: /fort worden|mccurdy pavilion|wheeler theat/i, // the Wheeler Theater (TM KovZpap9Ie, empty) is a 250-seat room on the same grounds
     },
     'Jefferson County Fairgrounds': {
+      geo: [48.13406, -122.78303],
       capacity: 2000,
       type: 'community',
       cssVar: '--v-jeffco',
@@ -140,6 +144,7 @@
     },
     // --- Down the coast: Ocean Shores and Shelton, two hours and more ---
     'Quinault Beach Resort': {
+      geo: [47.0138, -124.1651],
       area: 'town',
       capacity: 500,
       type: 'concert',
@@ -151,6 +156,7 @@
       alias: /quinault beach/i,
     },
     'Ocean Shores Convention Center': {
+      geo: [47.0085, -124.16344],
       area: 'town',
       capacity: 2000,
       type: 'community',
@@ -162,6 +168,7 @@
       alias: /ocean shores convention/i,
     },
     'Little Creek Casino': {
+      geo: [47.12863, -123.10158],
       area: 'town',
       capacity: 1200,
       type: 'concert',
@@ -219,6 +226,28 @@
     ics: { name: 'Forks Events', short: 'Forks Events', teams: 'Seattle home teams — every season', prodid: '-//here.events//forks-events//EN', uidDomain: 'fosdal.net', // the UID domain the whole family issues (the shared ics test pins it)
       desc: 'Upcoming events around Forks\\, WA — the Olympic Peninsula rooms and the coast\\, with the Seattle clubs\' seasons' },
     teams: TEAMS,
+    map: { // the Map view (local-map.js; the ground drawn once by scripts/build-local-map.mjs from OpenStreetMap, committed as site/local-map.json) — Steve, 2026-10-25
+      kind: 'urban',
+      bbox: [46.9, -124.75, 48.25, -122.65], // south, west, north, east — the whole Olympic Peninsula — Forks on the west coast, the rooms a drive away on every side
+      // no home box: the Map opens on the whole frame (the rooms are a drive apart)
+      roads: ['motorway', 'trunk', 'primary'],
+      tolerance: 2.5,
+      labels: [
+        { name: 'Forks', lat: 47.9502, lon: -124.3862, anchor: 'start' },
+        { name: 'La Push', lat: 47.9092, lon: -124.6374, anchor: 'end' },
+        { name: 'Port Angeles', lat: 48.1181, lon: -123.4307, anchor: 'start' },
+        { name: 'Sequim', lat: 48.0849, lon: -123.1097, anchor: 'start' },
+        { name: 'Port Townsend', lat: 48.118, lon: -122.7695, anchor: 'start' },
+        { name: 'Ocean Shores', lat: 46.9737, lon: -124.1563, anchor: 'end' },
+        { name: 'Aberdeen', lat: 46.9754, lon: -123.8157, anchor: 'start' },
+        { name: 'Hoquiam', lat: 46.9809, lon: -123.8893, anchor: 'end' },
+        { name: 'Shelton', lat: 47.2151, lon: -123.1007, anchor: 'start' },
+        { name: 'Pacific Ocean', lat: 47.5, lon: -124.62, kind: 'water', anchor: 'middle' },
+        { name: 'Strait of Juan de Fuca', lat: 48.22, lon: -123.6, kind: 'water', anchor: 'middle' },
+        { name: 'Hood Canal', lat: 47.62, lon: -122.93, kind: 'water', anchor: 'middle' },
+        { name: 'Grays Harbor', lat: 46.93, lon: -124.02, kind: 'water', anchor: 'middle' },
+      ],
+    },
     venues: VENUES,
     defaultOn: DEFAULT_ON,
     defaultOff: DEFAULT_OFF,
