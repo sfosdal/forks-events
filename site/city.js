@@ -210,10 +210,10 @@
 
   var WORDS = {
     teamCity: 'Seattle', // the board drops it from the clubs' names ("Seattle Kraken" → Kraken)
-    presetDefault: 'Every room — the peninsula and the coast — every team and type',
-    presetNeighborhood: 'The Olympic Peninsula rooms only — Sequim, Port Angeles, Port Townsend',
+    presetDefault: 'Every venue — the peninsula and the coast — every team and type',
+    presetNeighborhood: 'The Olympic Peninsula venues only — Sequim, Port Angeles, Port Townsend',
     presetBig: 'Only the places that hold 2,000 or more — the fairgrounds and the convention center',
-    phrases: { all: 'Showing everything.', none: 'Showing nothing yet — open Filter and pick some venues.', neighborhood: 'Showing the Olympic Peninsula rooms only.', big: 'Showing the big rooms only — the fairgrounds and the convention center.' },
+    phrases: { all: 'Showing everything.', none: 'Showing nothing yet — open Filter and pick some venues.', neighborhood: 'Showing the Olympic Peninsula venues only.', big: 'Showing the big venues only — the fairgrounds and the convention center.' },
   };
 
   global.LQACity = {
