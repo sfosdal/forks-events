@@ -228,6 +228,7 @@
     teams: TEAMS,
     map: { // the Map view (local-map.js; the ground drawn once by scripts/build-local-map.mjs from OpenStreetMap, committed as site/local-map.json) — Steve, 2026-10-25
       kind: 'urban',
+      boundary: { osm: 237796 }, // the city line, always drawn (Steve, 2026-11-02): OpenStreetMap's boundary relation for Forks
       bbox: [46.9, -124.75, 48.25, -122.65], // south, west, north, east — the whole Olympic Peninsula — Forks on the west coast, the rooms a drive away on every side
       home: [47.82, -124.68, 48.06, -124.1], // the view at first: Forks and La Push (Steve, 2026-11-01: "forks centered"); the venues are a drive away, the fit button shows the whole peninsula
       roads: ['motorway', 'trunk', 'primary'],
