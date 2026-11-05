@@ -167,22 +167,22 @@
       tm: { id: 'KovZpZA7enaA', match: 'ocean shores convention', fallbackUrl: 'https://www.oceanshoresconventioncenter.com/' },
       alias: /ocean shores convention/i,
     },
-    'Little Creek Casino': {
+    'Skookum Creek Event Center': { // Little Creek Casino Resort's showroom; the casino's own site names it so (Ticketmaster: "Skookum Creek Events Center", renamed 2026-11-03; Steve, 2026-11-05)
       geo: [47.12863, -123.10158],
       area: 'town',
       capacity: 1200,
       type: 'concert',
       cssVar: '--v-littlecreek',
       color: '#ea8686',
-      url: 'https://www.little-creek.com/entertainment',
-      icon: 'https://www.google.com/s2/favicons?domain=www.little-creek.com&sz=128',
-      tm: { id: 'KovZpaG_ee', match: 'little creek', fallbackUrl: 'https://www.little-creek.com/entertainment' }, // Ticketmaster also has a 'Little Creek Casino Resort' (ZFr9jZkvAe), empty; `match` folds its listings here if any appear
+      url: 'https://littlecreek.com/event-center-2/', // the Event Center link in the casino's own menu (little-creek.com now redirects to littlecreek.com's home page)
+      icon: 'https://www.google.com/s2/favicons?domain=littlecreek.com&sz=128',
+      tm: { id: 'KovZpaG_ee', match: 'skookum creek', fallbackUrl: 'https://littlecreek.com/event-center-2/' }, // Ticketmaster also has a 'Little Creek Casino Resort' (ZFr9jZkvAe), empty; `match` folds its listings here if any appear
       alias: /little creek|skookum creek event/i,
     },
   };
 
   // The filter panel's starting state: every room on, nothing off.
-  var DEFAULT_ON = ['7 Cedars Casino', 'Clallam County Fairgrounds', 'Fort Worden', 'Jefferson County Fairgrounds', 'Quinault Beach Resort', 'Ocean Shores Convention Center', 'Little Creek Casino'];
+  var DEFAULT_ON = ['7 Cedars Casino', 'Clallam County Fairgrounds', 'Fort Worden', 'Jefferson County Fairgrounds', 'Quinault Beach Resort', 'Ocean Shores Convention Center', 'Skookum Creek Event Center'];
   var DEFAULT_OFF = [];
   var PREFS_KNOWN_FROM = null; // no default-off venue yet, so nothing for saved prefs to be told about
 
@@ -202,7 +202,7 @@
   // 21 slots from the first build: five base-36 digits.
   var CODE_LENGTH = 5;
   var REGISTRY = [
-    ['venue', '7 Cedars Casino'], ['venue', 'Clallam County Fairgrounds'], ['venue', 'Fort Worden'], ['venue', 'Jefferson County Fairgrounds'], ['venue', 'Quinault Beach Resort'], ['venue', 'Ocean Shores Convention Center'], ['venue', 'Little Creek Casino'],
+    ['venue', '7 Cedars Casino'], ['venue', 'Clallam County Fairgrounds'], ['venue', 'Fort Worden'], ['venue', 'Jefferson County Fairgrounds'], ['venue', 'Quinault Beach Resort'], ['venue', 'Ocean Shores Convention Center'], ['venue', 'Skookum Creek Event Center'],
     ['badge', 'concert'], ['badge', 'sports'], ['badge', 'arts'], ['badge', 'community'],
     ['team', 'seahawks'], ['team', 'mariners'], ['team', 'kraken'], ['team', 'storm'], ['team', 'reign'], ['team', 'sounders'],
     ['cap', 'stadium'], ['cap', 'arena'], ['cap', 'hall'], ['cap', 'room'],
